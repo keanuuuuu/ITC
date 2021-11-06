@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="menu.css">
+        <title>Assignment 1</title> 
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    </head>
+    <a href="Keanu Yap Website.html"><button type="button">Back to menu</button></a>
+    <body id="act1BG">
+        <h1>ASSIGNMENT 1: CONVERSIONS</h1><br>
+        <div class="celcius" align="center">
+            <form id="celciusForm">
+                   <div>
+                       <h2>Celcius to Farenheit</h2>
+                      
+                     <label>Celcius</label>
+                     
+                     <input type="number" id="n1"name="intCel" placeholder="Enter Celcius" required>
+                     <button id = "conv" type="button">Convert</button>
+                     
+                     <button type="reset">Reset</button>
+                   </div><br>
+
+                   <label>Farenheit:</label>
+                   <input id="farenheit" name="farenheit" type="number" readonly>
+                   
+                    
+                   <script>
+                       function CelctoFar(x){
+                     return x * 9/5  + 32;
+                    } 
+                    function displayToFar(){
+                    var input = Number(document.getElementById("n1").value); 
+                    var farenheit = CelctoFar(input); 
+    
+                     document.getElementById("farenheit").value = farenheit;
+                    }
+                    document.getElementById("conv").addEventListener("click", displayToFar)
+                    document.getElementById("n1")
+                    .addEventListener("keyup", function(event) {
+                    event.preventDefault();
+                    if (event.keyCode === 13) {
+                    document.getElementById("conv").click();
+                    }
+                    });
+                   </script>                       
+            </form>
+        </div>
+        <br>
+        <div class="farenheit" align="center">
+            <form id="farenheitForm">
+                 <div>
+                     <h2>Farenheit to Celcius</h2>
+
+                     <label>Farenheit</label>
+                     <input type="number" id="n2"name="intFar" placeholder="Enter Farenheit" required>
+                     <button id = "conv2" type="button">Convert</button>
+
+                     <button type="reset">Reset</button>
+                 </div><br>
+
+                 <label>Celcius:</label>
+                 <input id="celcius" name="celcius" type="number" readonly>
+
+                 <script>
+                     function FartoCelc(x){ 
+
+                    return (x - 32) * 5/9;
+                    }
+                    function displayToCel(){
+
+                    var input2 = Number(document.getElementById("n2").value);
+                    var celcius = FartoCelc(input2);
+
+                    document.getElementById("celcius").value = celcius.toFixed(5);
+                    }
+                    document.getElementById("conv2").addEventListener("click", displayToCel)
+                    document.getElementById("n2")
+                    .addEventListener("keyup", function(event) {
+                    event.preventDefault();
+                    if (event.keyCode === 13) {
+                    document.getElementById("conv2").click();
+                    }
+                    });
+                 </script>
+            </form>
+        </div>
+        <br>
+        <div class="meter" align="center">
+            <form id="meterToFeet">
+                <div>
+                    <h2>Meters to Feet</h2>
+
+                    <label>Meters</label>
+                    <input type="number" id="meter" name="meter" placeholder="Enter Meters" required>
+                    <button id = "conv3" type="button">Convert</button>
+
+                    <button type="reset">Reset</button>
+                </div><br>
+
+                <label>Feet:</label>
+                <input type="number" id="feet" name="feet" readonly>
+
+                <script>
+                    function MettoFeet(x){
+                    return x*3.28084;
+                    }
+                    function displayMtoF(){
+                    var input3 = Number(document.getElementById("meter").value);
+                    var feet = MettoFeet(input3);
+
+                     document.getElementById("feet").value = feet.toFixed(4);
+                    }
+                    document.getElementById("conv3").addEventListener("click", displayMtoF)
+                    document.getElementById("meter")
+                    .addEventListener("keyup", function(event) {
+                    event.preventDefault();
+                    if (event.keyCode === 13) {
+                    document.getElementById("conv3").click();
+                    }
+                    });
+                </script>
+            </form>
+        </div>
+        <br>
+        <div class="feet" align="center">
+            <form id="feetToMeter">
+                <div>
+                    <h2>Feet to Meters</h2>
+
+                    <label>Feet</label>
+                    <input type="number" id="paa" name="paa" placeholder="Enter Feet" required>
+                    <button id="conv4" type="button">Convert</button>
+
+                    <button type="reset">Reset</button>
+                </div><br>
+
+                <label>Meters:</label>
+                <input type="number" id="meters" name="meters" readonly>
+
+                <script>
+                    function FeettoMeters(x){
+                    return x/3.28084;
+                    }
+                    function displayFeettoMeters(){
+                    var input4 =Number(document.getElementById("paa").value);
+                    var meters = FeettoMeters(input4);
+                     document.getElementById("meters").value = meters.toFixed(4);
+                    }
+                    document.getElementById("conv4").addEventListener("click", displayFeettoMeters)
+                    document.getElementById("paa")
+                    .addEventListener("keyup", function(event) {
+                    event.preventDefault();
+                    if (event.keyCode === 13) {
+                    document.getElementById("conv4").click();
+                    }
+                    });
+                </script>
+            </form>
+        </div>
+        <footer> John Kearney Yap loves u </footer>
+</body>
+</html>

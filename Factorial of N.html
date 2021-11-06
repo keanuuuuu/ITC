@@ -1,0 +1,77 @@
+<html>
+    <a href="Keanu Yap Website.html"><button type="button">Back to menu</button></a>
+<body>
+
+    <div align="center">
+    <h1>Factorial, Sum, and Average of First N Natural Numbers</h1>
+    <h2>The Nth Factorial</h2>
+    
+    <p>
+        <label>Input a value of n</label>
+        <input id="Num">
+        <button onclick="factorial()">Calculate</button> 
+    </p>
+    <p>The factorial is:<span id="fact"></span>
+    </p>
+   
+    <script>
+        
+    
+    function factorial()
+    {
+    var n = document.getElementById("Num").value;
+    var i, f=1;
+    for(i=1; i<=n; i++) f *= i;
+    document.getElementById("fact").innerHTML = f;
+    }
+    
+    </script>
+    </div>
+    
+
+    <div align="center">
+        <h3>The Sum of the First N Numbers</h3>
+        
+            <p>
+                <label>Input a value of n</label>
+                <input id="Num1">
+                <button onclick="Summm()">Calculate</button> 
+            </p>
+            <p>The sum is: <span id="sum"></span></p>
+            <script>
+            
+            function Summm()
+            {
+            var n = document.getElementById("Num1").value;
+            var i, f=0;
+            for(i=1; i<=n; i++) f += i;
+            document.getElementById("sum").innerHTML = f;
+            }
+            
+        </script>
+
+<div align="center">
+         <h3>The Average of the First N Numbers</h3>
+        
+            <p>
+                <label>Input a value of n</label>
+                <input id="num2">
+                <button onclick="sumMo1()">Calculate</button> 
+            </p>
+            <p>The average is:<span id="sum2"></span>
+            </p>
+            
+            <script>
+            
+            function sumMo1()
+            {
+            var n = document.getElementById("num2").value;
+            var i, f=0;
+            for(i=1; i<=n; i++) f += i;
+            var avg = f/i+.5
+            document.getElementById("sum2").innerHTML = avg;
+            }
+            
+        </script>
+        </body>
+        </html>
